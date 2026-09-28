@@ -8,6 +8,7 @@ import { Nav } from '@/components/nav/Navbar';
 import { baseMetadata } from '@/lib/metadata';
 import { SkipToContent } from '@/components/layouts/skip-to-content';
 import { PageBackdrop } from '@/components/layouts/page-backdrop';
+import { Footer } from '@/components/layouts/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -62,6 +63,8 @@ export default function RootLayout({
           <PageBackdrop /> 
           <Nav />
           {children}
+          <Footer />
+
          
         </Providers>
       </body>
