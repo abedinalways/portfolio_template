@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { HeroCtas } from './hero-ctas';
-
-import { PortraitMorph } from './portrait-morph';
+import { PortraitCard } from './portrait-card';
 import { TimeGreeting } from './time-greeting';
 import { IntroLine } from './intro-line';
 import { FadeIn, ScaleUnblur } from '../ui/motion-premitive';
@@ -37,15 +36,12 @@ export function Hero(): ReactNode {
           </FadeIn>
 
           <ScaleUnblur className="flex justify-stretch md:justify-end">
-            <div className="border-foreground/8 bg-background relative aspect-square w-full overflow-hidden rounded-4xl border p-1.5 shadow-sm md:max-w-105">
-              <div className="relative h-full w-full overflow-hidden rounded-[1.6rem]">
-                <PortraitMorph
-                  srcA={PORTRAIT_SRC}
-                  srcB={PORTRAIT_HOVER_SRC}
-                  alt="Josh portrait"
-                />
-              </div>
-            </div>
+            <PortraitCard
+              src={PORTRAIT_SRC}
+              hoverSrc={PORTRAIT_HOVER_SRC}
+              alt="Josh portrait"
+              className="md:max-w-105"
+            />
           </ScaleUnblur>
         </div>
       </div>
